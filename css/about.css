@@ -8,7 +8,7 @@ body {
 }
 @font-face {
   font-family: YoungSerif-Regular;
-  src: url(/Portfolio/fonts/Young_Serif/YoungSerif-Regular.ttf);
+  src: url(/fonts/Young_Serif/YoungSerif-Regular.ttf);
 }
 body{
   background-color: #ddddeb;
@@ -61,7 +61,7 @@ body{
 }
 
 .main_container .pic {
-  background: url(/Portfolio/img/aziz.png) no-repeat;
+  background: url(/img/aziz.png) no-repeat;
   background-size: cover;
   border-top-right-radius: 5%;
   border-end-end-radius: 5%;

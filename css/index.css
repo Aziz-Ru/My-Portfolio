@@ -7,12 +7,12 @@
 }
 @font-face {
   font-family: YoungSerif-Regular;
-  src: url(/Portfolio/fonts/Young_Serif/YoungSerif-Regular.ttf);
+  src: url(/fonts/Young_Serif/YoungSerif-Regular.ttf);
 }
 body {
   background-color: #ffffff;
   color: rgb(247, 153, 153);
-  background: url(/Portfolio/img/home.jpg) no-repeat;
+  background: url(/img/home.jpg) no-repeat;
   background-size: cover;
 }
 .Heading {
