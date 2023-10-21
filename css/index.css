@@ -3,32 +3,41 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 @font-face {
-  font-family: YoungSerif-Regular;
-  src: url(/fonts/Young_Serif/YoungSerif-Regular.ttf);
+  font-family: myFont;
+  src: url(/fonts/Noto_Serif/static/NotoSerif-Regular.ttf);
+}
+:root {
+  --header-color: #071725;
+  --bg-color: #200d0d;
+  --text-color: #ededed;
+  --hover-color: #11ffff;
+  --gap: 1rem;
+  --text-size: 18px;
+  --my-weight: 600;
+  --shadow-color: #2266cc;
 }
 body {
-  background-color: #ffffff;
-  color: rgb(247, 153, 153);
-  background: url(/img/home.jpg) no-repeat;
-  background-size: cover;
+  background-color: var(--bg-color);
+  font-family: myFont;
+  color: var(--text-color);
+  background-image: url(/img/home.jpg);
 }
 .Heading {
-  background-color: #071725;
+  background-color: var(--header-color);
   color: #ededed;
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 0.5rem;
+  padding: 0.5rem;
 }
 .name {
   /* animation: down 1s 1; */
-  font-family: YoungSerif-Regular;
-  letter-spacing: 0.3rem;
+  letter-spacing: 4px;
 }
 .name::first-letter {
   font-size: 2.5rem;
@@ -42,91 +51,93 @@ body {
 }
 .navbar1 a {
   font-size: 1rem;
-  margin-right: 1rem;
-  color: #ededed;
+  margin-right: var(--gap);
+  color: var(--text-color);
   font-weight: 600;
 }
-.dropmenu{
+.navbar1 .active_page {
+  font-size: var(--text-size);
+  color: var(--hover-color);
+  transition: 0.3s;
+}
+.navbar1 a:hover {
+  font-size: var(--text-size);
+  color: var(--hover-color);
+  transition: 0.3s;
+}
+
+.dropmenu {
   position: relative;
   display: none;
 }
-.dropbtn {
-  min-width: 150px;
-  text-align: center;
-  padding: 4px;
-  color: #ededed;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: block;
-  font-size: 1.4rem;
+.dropmenu i {
+  color: var(--text-color);
 }
-.dropbtn:hover{
-  background-color: #1f5353;
+.dropmenu i:hover {
+  color: var(--header-color);
 }
 .navbar2 {
   position: absolute;
   background-color: white;
-  min-width: 150px;
-  font-size: 20px;
-  text-align: center;
+  max-width: 100px;
+  text-align: start;
   display: none;
   z-index: 1;
 }
+
 .navbar2 a {
-  color: #fffdfd;
-  background-color: #1f5353;
+  color: var(--text-color);
+  background-color: var(--header-color);
   padding: 4px;
   display: block;
 }
-.dropmenu:hover .navbar2{
+
+.dropmenu:hover .navbar2 {
   display: block;
 }
 .navbar2 a:hover {
-  color: #11ffff;
+  color: var(--hover-color);
 }
-
-.navbar1 .active_page {
-  font-size: 1.1rem;
-  color: #11ffff;
-  transition: 0.3s;
+@media (max-width: 740px) {
+  .navbar1 {
+    display: none;
+  }
+  .dropmenu {
+    display: inline-block;
+  }
 }
-.navbar1 a:hover {
-  font-size: 1.1rem;
-  color: #11ffff;
-  transition: 0.3s;
-}
-
 .main_container {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid rgb(255, 247, 247);
   padding: 10%;
 }
 
 .container {
   text-align: center;
-  color: #fcd600;
+  color: var(--text-color);
 }
 .container .p1 {
   font-size: 1.5rem;
-  font-weight: 900;
-  font-family: YoungSerif-Regular;
+  font-weight: var(--my-weight);
+  font-family: myFont;
   letter-spacing: 2px;
-  /* animation: down 2s; */
+  text-shadow: 4px 6px 10px var(--shadow-color);
+  animation: down 2s;
 }
 .container .p2 {
-  font-size: 3rem;
-  font-family: YoungSerif-Regular;
-  /* animation: left 2s; */
+  font-size: 2.5rem;
+  font-weight: var(--my-weight);
+  text-shadow: 6px 8px 10px var(--shadow-color);
+  animation: left 2s;
 }
 .container .p3 {
-  font-size: 1.2rem;
-  font-family: YoungSerif-Regular;
-  /* animation: left 2s; */
+  font-size: var(--text-size);
+  font-family: myFont;
+  text-shadow: 4px 6px 6px var(--shadow-color);
+  animation: left 2s;
 }
 
 .img_box {
@@ -134,14 +145,14 @@ body {
   top: 4rem;
   display: flex;
   justify-content: center;
-  /* animation: up 3s; */
+  animation: up 3s;
 }
 .img_box a {
   color: #ededed;
-  margin-left: 1rem;
+  margin-left: 4rem;
 }
 .img_box a:hover {
-  color: #fc007e;
+  color: var(--hover-color);
 }
 
 @keyframes down {
@@ -158,13 +169,4 @@ body {
   from {
     transform: translateX(-200%);
   }
-}
-@media (max-width: 840px) {
-  .navbar1 {
-    display: none;
-  }
-  .dropmenu{
-    display: inline-block;
-  }
-
 }

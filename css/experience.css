@@ -1,45 +1,89 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
-  color: black;
-  background-color: rgb(255, 255, 255);
-   
+  text-decoration: none;
+  letter-spacing: 0.7px;
+  color: #000000;
 }
 @font-face {
   font-family: YoungSerif-Regular;
-  src: url(/Portfolio/fonts/Young_Serif/YoungSerif-Regular.ttf);
+  src: url(/fonts/Young_Serif/YoungSerif-Regular.ttf);
 }
-.btn1,.btn2{
-  
+:root {
+  --bg-color: #d7d7d7;
+  --text-color: #000000;
+  --hover-color: #11ffff;
+  --gap: 1rem;
+  --text-size: 18px;
+  --text-font: "Times New Roman", Times, serif;
+  --my-weight: 600;
+  --shadow-color: #2266cc;
+  --btn-bg: #f4511e;
+}
+body {
+  background-color: var(--bg-color);
+}
+.Heading {
   font-family: YoungSerif-Regular;
-  margin: 5px;
-  text-decoration: none;
   text-align: center;
+  line-height: 2.5rem;
   letter-spacing: 2px;
-  font-size: 1.15rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
+  animation: down 1s;
 }
-.btn1{
+.btn1,
+.btn2 {
+  font-family: YoungSerif-Regular;
+  background-color: var(--btn-bg);
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: var(--text-size);
+}
+.btn1 {
   position: fixed;
   top: 0;
   left: 0;
 }
-.btn2{
- position: fixed;
- top: 0;
- right: 0;
+.btn2 {
+  position: fixed;
+  top: 0;
+  right: 0;
 }
-.btn1:hover,.btn2:hover {
-    background-color: gray;
+.btn1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.btn2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.btn1 span::before {
+  content: "\00ab";
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn2 span::after {
+  content: "\00bb";
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn1:hover span {
+  padding-left: 15px;
+}
+.btn2:hover span {
+  padding-right: 15px;
+}
+.btn1:hover span::before {
+  opacity: 1;
+}
+.btn2:hover span::after {
+  opacity: 1;
 }
 .ex_heading {
   margin-top: 3rem;
@@ -63,7 +107,6 @@ body {
   padding: 0.5rem;
   border-left: 2px solid;
   text-align: center;
-  
 }
 .box11,
 .box22,

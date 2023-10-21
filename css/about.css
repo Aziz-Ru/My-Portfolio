@@ -2,37 +2,46 @@
   box-sizing: border-box;
   text-decoration: none;
   color: black;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
 }
-body {
-  background-color: rgb(255, 255, 255);
-}
+
 @font-face {
   font-family: YoungSerif-Regular;
   src: url(/fonts/Young_Serif/YoungSerif-Regular.ttf);
 }
-body{
-  background-color: #ddddeb;
+:root {
+  --bg-color: #d7d7d7;
+  --text-color: #000000;
+  --hover-color: #11ffff;
+  --gap: 1rem;
+  --text-size: 18px;
+  --text-font: "Times New Roman", Times, serif;
+  --my-weight: 600;
+  --shadow-color: #2266cc;
+  --btn-bg: #f4511e;
+}
+body {
+  background-color: var(--bg-color);
+  
 }
 .Heading {
   font-family: YoungSerif-Regular;
   text-align: center;
+  line-height: 2.5rem;
+  letter-spacing: 2px;
   animation: down 1s;
 }
 .btn1,
 .btn2 {
   font-family: YoungSerif-Regular;
-  margin: 5px;
-  text-decoration: none;
-  text-align: center;
+  background-color: var(--btn-bg);
+  padding: 10px 20px;
   letter-spacing: 2px;
-  font-size: 1.15rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  background-color: black;
-  color: white;
   border-radius: 5px;
+  margin: 5px;
+  font-size: var(--text-size);
 }
 .btn1 {
   position: fixed;
@@ -44,16 +53,46 @@ body{
   top: 0;
   right: 0;
 }
-
-.btn1:hover,
-.btn2:hover {
-  background-color: rgb(145, 145, 145);
+.btn1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
+.btn2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.btn1 span::before {
+  content: "\00ab";
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn2 span::after {
+  content: "\00bb";
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn1:hover span {
+  padding-left: 15px;
+}
+.btn2:hover span {
+  padding-right: 15px;
+}
+.btn1:hover span::before {
+  opacity: 1;
+}
+.btn2:hover span::after {
+  opacity: 1;
+}
+
 .main_container {
   display: flex;
-  background-color: rgb(248, 244, 25);
+  background-color: var(--bg-color);
   align-items: center;
-  height: 90vh;
+  height: 70vh;
   border-radius: 2%;
   box-shadow: 0.5rem;
   margin: 3rem;
@@ -63,8 +102,7 @@ body{
 .main_container .pic {
   background: url(/img/aziz.png) no-repeat;
   background-size: cover;
-  border-top-right-radius: 5%;
-  border-end-end-radius: 5%;
+  border-radius: 5%;
   height: 30rem;
   width: 20rem;
 }
@@ -105,9 +143,6 @@ body{
   .main_container .pic {
     height: 8rem;
     width: 8rem;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
-    background-size: cover;
   }
   .box {
     flex-direction: column;

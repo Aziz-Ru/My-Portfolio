@@ -1,26 +1,45 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  letter-spacing: 0.7px;
+  color: #000000;
+}
+@font-face {
+  font-family: YoungSerif-Regular;
+  src: url(/fonts/Young_Serif/YoungSerif-Regular.ttf);
+}
+:root {
+  --bg-color: #d7d7d7;
+  --text-color: #000000;
+  --hover-color: #11ffff;
+  --gap: 1rem;
+  --text-size: 18px;
+  --text-font: "Times New Roman", Times, serif;
+  --my-weight: 600;
+  --shadow-color: #2266cc;
+  --btn-bg: #f4511e;
 }
 body {
-  background-color: white;
-  color: black;
+  background-color: var(--bg-color);
+}
+.Heading {
+  font-family: YoungSerif-Regular;
+  text-align: center;
+  line-height: 2.5rem;
+  letter-spacing: 5px;
+  animation: down 1s;
 }
 .btn1,
 .btn2 {
   font-family: YoungSerif-Regular;
-  margin: 5px;
-  text-decoration: none;
-  text-align: center;
+  background-color: var(--btn-bg);
+  padding: 10px 20px;
   letter-spacing: 2px;
-  font-size: 1.15rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  background-color: black;
-  color: white;
   border-radius: 5px;
+  margin: 5px;
+  font-size: var(--text-size);
 }
 .btn1 {
   position: fixed;
@@ -32,10 +51,39 @@ body {
   top: 0;
   right: 0;
 }
-
-.btn1:hover,
-.btn2:hover {
-  background-color: rgb(145, 145, 145);
+.btn1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.btn2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.btn1 span::before {
+  content: "\00ab";
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn2 span::after {
+  content: "\00bb";
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn1:hover span {
+  padding-left: 15px;
+}
+.btn2:hover span {
+  padding-right: 15px;
+}
+.btn1:hover span::before {
+  opacity: 1;
+}
+.btn2:hover span::after {
+  opacity: 1;
 }
 .heding {
   text-align: center;
@@ -71,25 +119,44 @@ body {
 .box11 .box111 .src_code {
   color: rgb(255, 254, 255);
   background-color: black;
-  padding-top: .3rem;
-  padding-bottom: .3rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   border-radius: 5px;
 }
-.box11 .box111 .src_code:hover{
+.box11 .box111 .src_code:hover {
   color: black;
   background-color: aqua;
 }
+.last_heading {
+  margin-top: 5rem;
 
-@media (max-width:740px) {
-.box11,
-.box22{
-  flex-direction: column;
-}
-.box111 {
-  
+  display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
 }
-  
+.headings{
+  border: 2px solid;
+  padding: 10px 10px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-family: YoungSerif-Regular;
+}
+.headings a {
+  margin-left: 15px;
+  padding: 15px;
+}
+.headings a:hover{
+  color: var(--hover-color);
+}
+
+@media (max-width: 740px) {
+  .box11,
+  .box22 {
+    flex-direction: column;
+  }
+  .box111,
+  .box222 {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 }
