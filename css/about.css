@@ -24,7 +24,6 @@
 }
 body {
   background-color: var(--bg-color);
-  
 }
 .Heading {
   font-family: YoungSerif-Regular;
@@ -127,12 +126,12 @@ body {
 }
 @keyframes up {
   from {
-    transform: translateY(200%);
+    transform: translateY(300%);
   }
 }
 @keyframes down {
   from {
-    transform: translateY(-200%);
+    transform: translateY(-300%);
   }
 }
 @media (max-width: 1040px) {
