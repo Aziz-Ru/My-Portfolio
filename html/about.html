@@ -3,58 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/about.css" />
-    <script
-      src="https://kit.fontawesome.com/2cb829ce22.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>About</title>
+    <title>Document</title>
+    <style>
+      #navbar {
+        background-color: #333; /* Black background color */
+        position: fixed; /* Make it stick/fixed */
+        top: 50px; /* Hide the navbar 50 px outside of the top view */
+        width: 100%; /* Full width */
+        transition: top 0.3s; /* Transition effect when sliding down (and up) */
+      }
+
+      /* Style the navbar links */
+      /* #navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+      } */
+
+      #navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+    </style>
   </head>
   <body>
-    <a href="/index.html" class="btn1"><span>Back</span></a>
-    <a href="/html/Experience.html" class="btn2"><span> Next</span></a>
-
-    <div class="Heading">
-      <h3>Get To Know More</h3>
-      <h1>About Me</h1>
+    <div id="navbar">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
     </div>
+    <!-- <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-    <div class="main_container">
-      <div class="pic_cc">
-        <div class="pic"></div>
-      </div>
-      .
-      <div class="container">
-        <p>
-          Hi I'm Abdul Aziz. I'm a competitive programmer , an Android
-          developer, programming enthusiast, and is currently learning to become
-          a full-stack developer. I passionate and driven individual who always
-          eager to learn new things and improve my skills.
-        </p>
-        <div class="education">
-          <h2><i class="fa-solid fa-school fa-xs"></i> Education:</h2>
-          <ul>
-            <li>
-              Studying B.sc in Computer Science & Engineering at University of
-              Rajshahi
-            </li>
-            <li>Studied Collectorate School & College</li>
-            <li>Studied Namuri School & College</li>
-          </ul>
-
-          <p></p>
-        </div>
-        <div class="experience">
-          <h2><i class="fa-solid fa-briefcase fa-xs"></i> Experience:</h2>
-          <ul>
-            <li>6 months + Android Developer Experience with (java)</li>
-            <li>
-              6 months + Frontend Developer Experience with
-              (html,css,javascript)
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-50px";
+        }
+      }
+    </script> -->
   </body>
 </html>

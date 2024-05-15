@@ -4,63 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/index.css" />
-    <script
-      src="https://kit.fontawesome.com/2cb829ce22.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="/css/about.css" />
     <title>Home</title>
   </head>
+
   <body>
-    <header class="Heading">
-      <h1 class="name">Abdul Aziz</h1>
-      <div class="menuItems">
-        <nav class="navbar1">
-          <a href="#" class="active_page">Home</a>
-          <a href="/html/about.html">About</a>
-          <a href="/html/Experience.html">Experience</a>
-          <a href="/html/Project.html">Project</a>
-        
+    <section class="navigation" id="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!"
+            ><span class="name-first-part">Ab</span>
+            <span class="name-second-part">Aziz</span></a
+          >
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <div class="navbar-toggle" id="navbar-toggle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <ul class="nav-list" id="nav-list">
+            <li>
+              <a href="#!">Home</a>
+            </li>
+            <li>
+              <a href="#!">About</a>
+            </li>
+            <li>
+              <a href="#!">Resume</a>
+            </li>
+            <li>
+              <a href="#!">Services</a>
+            </li>
+            <li>
+              <a href="#!">Projects</a>
+            </li>
+            <li>
+              <a href="#!">Contact</a>
+            </li>
+          </ul>
         </nav>
-
-        <div class="dropmenu">
-          <nav class="navbar2">
-            <a href="#" class="active_page">Home</a>
-            <a href="/html/about.html">About</a>
-            <a href="/html/Experience.html">Experience</a>
-            <a href="/html/Project.html">Project</a>
-          
-          </nav>
-          <i class="fa-solid fa-bars fa-lg"></i>
+      </div>
+    </section>
+    <section class="section-1">
+      <div class="section-1-first-div"></div>
+      <div class="section-1-second-div"></div>
+      <div class="content">
+        <div class="greeting">Hey! I AM</div>
+        <div class="name">Abdul Aziz</div>
+        <div class="section-1-box">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 40 40"
+            fill="currentColor"
+            class="arrow-icon"
+          >
+            <path
+              d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"
+            ></path>
+          </svg>
         </div>
       </div>
-    </header>
-
-    <div class="main_container">
+    </section>
+    <section class="section-2">
       <div class="container">
-        <p class="p1">Hi, I'm Abdul Aziz</p>
-        <p class="p2">I'm A Full Stack Developer</p>
-        <p class="p3">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore quam
-          id repellat quas non ipsam voluptatibus officiis fugiat esse dolores
-          fugit error qui beatae ipsum tempora aliquid, incidunt, et quaerat.
-        </p>
-
-        <div class="img_box">
-          <a
-            href="https://m.facebook.com/profile.php/?id=100075146310483"
-            target="_blank"
-            ><i class="fa-brands fa-facebook fa-2xl"></i
-          ></a>
-          <a href="https://github.com/Aziz-Ru" target="_blank"
-            ><i class="fa-brands fa-github fa-2xl"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/abdul-aziz-816985251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin fa-2xl"></i
-          ></a>
+        <div class="about-1">
+          <img src="./img/Fav-removebg-preview.png" alt="" />
+        </div>
+        <div class="about-2">
+          <h1>About Me</h1>
+          <div class="description-about-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
+            optio nam architecto officiis rerum voluptatem deleniti minus eius
+            quos dicta minima delectus itaque, aliquid fuga ex consequatur,
+            omnis tenetur quaerat.
+          </div>
+          <div>
+            <div class="about-2-info">
+              <span class="about-2-entity">Name:</span>
+              <span class="about-2-data">Abdul Aziz</span>
+            </div>
+            <div class="about-2-info">
+              <span class="about-2-entity">Date of Birth:</span>
+              <span class="about-2-data">November 12 1996</span>
+            </div>
+            <div class="about-2-info">
+              <span class="about-2-entity">Address:</span>
+              <span class="about-2-data">Dhaka Bangladesh</span>
+            </div>
+            <div class="about-2-info">
+              <span class="about-2-entity">Email:</span>
+              <span class="about-2-data">siliconoxide4@gmail.com</span>
+            </div>
+            <div class="about-2-info">
+              <button>DOWNLOAD CV</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <script src="./js/HeaderStyle.js"></script>
   </body>
 </html>
