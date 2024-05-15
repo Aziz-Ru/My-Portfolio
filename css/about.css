@@ -10,7 +10,6 @@
   max-width: 1100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   box-shadow: 1px 2px 4px;
 }
 .about-1 {
@@ -40,6 +39,42 @@
   font-weight: 900;
   font-family: "Times New Roman", Times, serif;
 }
-.about-2-data {
+.about-2-data-1 {
   color: #999980;
+  padding-left: 60px;
+}
+.about-2-data-2 {
+  color: #999980;
+  padding-left: 8px;
+}
+.about-2-data-3 {
+  color: #999980;
+  padding-left: 45px;
+}
+.about-2-data-4 {
+  color: #999980;
+  padding-left: 60px;
+}
+.download-cv-btn {
+  background-color: #56c7ff;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 1px;
+  border: none;
+  font-size: 1.5rem;
+  color: #3c3c3c;
+  font-weight: 600;
+}
+.download-cv-btn:hover {
+  background-color: #48ade0;
+  color: black;
+}
+@media only screen and (max-width: 800px) {
+  .about-1 {
+    display: none;
+  }
+  .about-2 {
+    grid-column: 1/-1;
+    /* border: 2px solid; */
+  }
 }

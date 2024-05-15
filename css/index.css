@@ -134,7 +134,7 @@ nav ul li a:visited:hover {
 }
 
 .name-first-part {
-  background-color: blue;
+  background-color: rgb(99, 99, 226);
   border-radius: 50%;
   padding: 8px;
   font-weight: 900;
