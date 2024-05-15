@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/about.css" />
     <title>Home</title>
@@ -74,7 +75,12 @@
         </div>
       </div>
     </section>
-    <section class="section-2">
+    <section
+      class="section-2"
+      data-aos-delay="100"
+      data-aos-duration="1500"
+      data-aos="fade-right"
+    >
       <div class="container">
         <div class="about-1">
           <img src="./img/Fav-removebg-preview.png" alt="" />
@@ -113,5 +119,9 @@
     </section>
 
     <script src="./js/HeaderStyle.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
