@@ -193,13 +193,22 @@ nav ul li a:visited:hover {
   font-size: 1.5rem;
   color: #3367d1;
   font-weight: 900px;
-  padding: 6px;
+  /* padding: 6px; */
   font-family: sans-serif;
 }
 .name {
   font-size: 4rem;
   font-weight: 900;
   font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+}
+.typing-text {
+  font-size: 3rem;
+  color: #3367d1;
+  letter-spacing: 3px;
+  font-weight: 900;
+  padding-top: 10px;
+  font-family: sans-serif;
 }
 .shape-divider-bottom {
   position: absolute;
@@ -220,13 +229,6 @@ nav ul li a:visited:hover {
 
 .shape-divider-bottom .shape-fill {
   fill: #c4c4c4;
-}
-.typing-text {
-  font-size: 3rem;
-  color: #3367d1;
-  letter-spacing: 3px;
-  font-weight: 900;
-  font-family: sans-serif;
 }
 
 @media (max-width: 940px) {
