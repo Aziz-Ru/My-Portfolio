@@ -17,6 +17,7 @@
 }
 .project-container {
   max-width: 1200px;
+  padding: 0 1rem 0 1rem;
 }
 .project-cards {
   display: grid;

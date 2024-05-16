@@ -12,6 +12,7 @@
 }
 .services-container {
   max-width: 1200px;
+  padding: 0 1rem 0 1rem;
 }
 .services-description {
   text-align: center;
