@@ -9,6 +9,7 @@ body {
   position: absolute;
   width: 100%;
   padding: 10px;
+  z-index: 10;
 }
 .brand {
   position: absolute;
@@ -142,6 +143,25 @@ nav ul li a:visited:hover {
 .name-second-part {
   font-weight: 800;
 }
+.shape-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 339px;
+}
+
+.shape-divider-top .shape-fill {
+  fill: #c4c4c4;
+}
 
 .section-1 {
   display: flex;
@@ -161,41 +181,55 @@ nav ul li a:visited:hover {
 }
 .content {
   position: absolute;
-  top: 50%;
+  top: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .greeting {
-  background-color: #3367d1;
+  /* background-color: #3367d1; */
+  letter-spacing: 3px;
   font-size: 1.5rem;
+  color: #3367d1;
+  font-weight: 900px;
   padding: 6px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: sans-serif;
 }
 .name {
   font-size: 4rem;
   font-weight: 900;
   font-family: Arial, Helvetica, sans-serif;
 }
-.section-1-box {
-  background-color: #ebefff;
-  margin-top: 8px;
-  width: 100px;
-  height: 100px;
-  rotate: 45deg;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
-.arrow-icon {
-  rotate: -45deg;
-  color: #000000;
-  font-weight: 100;
-  font-size: 20px;
-  animation: top 3s infinite;
+
+.shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 329px;
 }
-/* @media (max-width: 940px) {
+
+.shape-divider-bottom .shape-fill {
+  fill: #c4c4c4;
+}
+.typing-text {
+  font-size: 3rem;
+  color: #3367d1;
+  letter-spacing: 3px;
+  font-weight: 900;
+  font-family: sans-serif;
+}
+
+@media (max-width: 940px) {
   .Heading {
     position: relative;
   }
@@ -203,7 +237,13 @@ nav ul li a:visited:hover {
     flex-direction: column;
     gap: 4px;
   }
-} */
+  .name {
+    font-size: 3rem;
+  }
+  .typing-text {
+    font-size: 2rem;
+  }
+}
 
 @keyframes top {
   from {

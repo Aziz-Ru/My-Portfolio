@@ -1,16 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+
 .section-2 {
   height: 80dvh;
-  padding: 10px;
+
+  /* border: 2px solid; */
+}
+.section-2-maincontainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.custom-shape-divider-top-1715877294 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1715877294 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 63px;
+}
+
+.custom-shape-divider-top-1715877294 .shape-fill {
+  fill: #c4c4c4;
+}
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  box-shadow: 1px 2px 4px;
+  box-shadow: 1px 2px 4px rgb(183, 183, 183);
 }
 .about-1 {
   display: inline;
@@ -65,6 +90,7 @@
   color: #3c3c3c;
   font-weight: 600;
 }
+
 .download-cv-btn:hover {
   background-color: #48ade0;
   color: black;
