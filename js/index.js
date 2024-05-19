@@ -1,4 +1,7 @@
 const TypingText = document.getElementById("typing-text");
+const navLinkList = document.querySelectorAll("#nav-links");
+const sections = document.querySelectorAll("section");
+const navbar = document.getElementById("navigation");
 const allTypedText = [
   "A Web Developer.",
   "A Photographer.",
@@ -39,3 +42,28 @@ function typeWriting() {
   }
 }
 typeWriting();
+
+window.onscroll = () => {
+  sections.forEach((section) => {
+    const scrollY = window.scrollY;
+    const offset = section.offsetTop;
+    const id = section.getAttribute("id");
+    if (scrollY > 400) {
+      navbar.style.backgroundColor = "#ffffff";
+    } else {
+      navbar.style.backgroundColor = "transparent";
+    }
+    if (scrollY > offset) {
+      navLinkList.forEach((link) => {
+        link.classList.remove("active");
+        const href = link.href;
+        const index = href.indexOf("#");
+        if (id == href.substr(index + 1)) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+};
+// console.log(navLinkList[1].href);
+// console.log(sections[1].getAttribute("id"));
