@@ -51,6 +51,33 @@
   padding: 10px 5px 10px 5px;
 }
 
+.comments-form {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 600px;
+}
+.contact-input-name {
+  min-width: 400px;
+  font-size: 1rem;
+  padding: 8px 6px 8px 6px;
+  margin: 1rem;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.contact-input-name:focus {
+  outline: solid rgb(38, 105, 213) 1px;
+  border: 1px solid rgb(38, 105, 213);
+}
 @media only screen and (max-width: 800px) {
   .contact-card {
     grid-column: 1/-1;

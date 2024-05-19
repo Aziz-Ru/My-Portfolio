@@ -53,7 +53,7 @@ window.onscroll = () => {
     } else {
       navbar.style.backgroundColor = "transparent";
     }
-    if (scrollY > offset) {
+    if (scrollY > offset - 100) {
       navLinkList.forEach((link) => {
         link.classList.remove("active");
         const href = link.href;
@@ -65,5 +65,4 @@ window.onscroll = () => {
     }
   });
 };
-// console.log(navLinkList[1].href);
-// console.log(sections[1].getAttribute("id"));
+
